@@ -1,0 +1,18 @@
+.draw_area
+{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 960px;
+    height: 960px;
+    margin: auto;
+    border: 1px black;
+}
+
+.draw_area div
+{
+    flex: 1 0 calc(100% / 16);
+    height: calc(960px / 16);
+    border: 1px solid black;
+    box-sizing: border-box;
+}
