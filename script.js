@@ -11,6 +11,7 @@ function resize(value)
     {
         draw_area.innerHTML = "";
         document.documentElement.style.setProperty("--divider", value);
+        const fragment = document.createDocumentFragment();
         for(let i=1; i<= value*value; i++)
         {
             const div = document.createElement("div");
@@ -21,8 +22,9 @@ function resize(value)
             div.addEventListener("mouseleave", () => {
                 div.style.backgroundColor = "";
             })
-            draw_area.appendChild(div);
+            fragment.appendChild(div);
         }
+        draw_area.appendChild(fragment);
     }
     else
     {
