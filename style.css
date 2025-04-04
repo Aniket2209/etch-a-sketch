@@ -1,3 +1,7 @@
+:root
+{
+    --divider: 16;
+}
 .draw_area
 {
     display: flex;
@@ -11,8 +15,8 @@
 
 .draw_area div
 {
-    flex: 1 0 calc(100% / 16);
-    height: calc(960px / 16);
+    flex: 1 0 calc(100% / var(--divider));
+    height: calc(960px / var(--divider));
     border: 1px solid black;
     box-sizing: border-box;
 }
